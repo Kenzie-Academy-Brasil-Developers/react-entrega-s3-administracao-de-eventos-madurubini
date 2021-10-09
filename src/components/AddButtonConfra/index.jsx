@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Button } from "../../pages/Home/styled";
 import { ConfraContext } from "../../providers/confra";
 import { ProductContext } from "../../providers/products";
 
@@ -11,5 +12,5 @@ export const AddButtonConfra = ({ item }) => {
     removeFromProducts(item);
   };
 
-  return <button onClick={handleClick}>Add to Confra</button>;
+  return <Button onClick={handleClick}>Add to Confra</Button>;
 };

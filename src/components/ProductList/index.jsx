@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useContext, useEffect } from "react";
+import { List } from "../../pages/Home/styled";
 import { ProductContext } from "../../providers/products";
 import Product from "../Product";
 
@@ -18,11 +19,11 @@ const ProductList = () => {
   );
 
   return (
-    <ul>
+    <List>
       {product.map((item) => (
         <Product item={item} isRemovable={false}></Product>
       ))}
-    </ul>
+    </List>
   );
 };
 

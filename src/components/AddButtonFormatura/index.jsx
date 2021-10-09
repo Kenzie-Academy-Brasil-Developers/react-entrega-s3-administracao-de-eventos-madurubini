@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Button } from "../../pages/Home/styled";
 import { FormaturaContext } from "../../providers/formatura";
 import { ProductContext } from "../../providers/products";
 
@@ -11,5 +12,5 @@ export const AddButtonFormatura = ({ item }) => {
     removeFromProducts(item);
   };
 
-  return <button onClick={handleClick}>Add to Formatura</button>;
+  return <Button onClick={handleClick}>Add to Formatura</Button>;
 };

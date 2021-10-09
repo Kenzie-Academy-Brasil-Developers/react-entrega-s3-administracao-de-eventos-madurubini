@@ -1,9 +1,10 @@
 import { useContext } from "react";
+import { Button } from "../../pages/Home/styled";
 import { CasamentoContext } from "../../providers/casamento";
 import { ConfraContext } from "../../providers/confra";
 import { FormaturaContext } from "../../providers/formatura";
 
-export const RemoveButton = ({ item, type }) => {
+export const RemoveButton = ({ item }) => {
   const { removeFromCasamento } = useContext(CasamentoContext);
   const { removeFromConfra } = useContext(ConfraContext);
   const { removeFromFormatura } = useContext(FormaturaContext);
@@ -14,5 +15,5 @@ export const RemoveButton = ({ item, type }) => {
     removeFromFormatura(item);
   };
 
-  return <button onClick={handleClick}>Remove</button>;
+  return <Button onClick={handleClick}>Remove</Button>;
 };

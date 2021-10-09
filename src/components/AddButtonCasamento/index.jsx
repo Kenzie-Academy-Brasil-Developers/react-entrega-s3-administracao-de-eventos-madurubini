@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Button } from "../../pages/Home/styled";
 import { CasamentoContext } from "../../providers/casamento";
 import { ProductContext } from "../../providers/products";
 
@@ -11,5 +12,5 @@ export const AddButtonCasamento = ({ item }) => {
     removeFromProducts(item);
   };
 
-  return <button onClick={handleClick}>Add to Casamento</button>;
+  return <Button onClick={handleClick}>Add to Casamento</Button>;
 };

@@ -1,3 +1,4 @@
+import { Buttons, Card } from "../../pages/Home/styled";
 import { AddButtonCasamento } from "../AddButtonCasamento";
 import { AddButtonConfra } from "../AddButtonConfra";
 import { AddButtonFormatura } from "../AddButtonFormatura";
@@ -16,22 +17,24 @@ const Product = ({
   isRemovable,
 }) => {
   return (
-    <li key={id}>
+    <Card key={id}>
       <h3>{name}</h3>
       <img src={image_url} alt={name}></img>
-      <p>Descrição:{description}</p>
-      <p>Início da Fabricação:{first_brewed}</p>
-      <p>Litros:{value}</p>
+      <p>Descrição: {description.substr(0, 70)}...</p>
+      <p>Início da Fabricação: {first_brewed}</p>
+      <p>Litros: {value}</p>
       {!isRemovable ? (
-        <>
+        <Buttons>
           <AddButtonCasamento item={item} />
           <AddButtonConfra item={item} />
           <AddButtonFormatura item={item} />
-        </>
+        </Buttons>
       ) : (
-        <RemoveButton item={item}></RemoveButton>
+        <Buttons>
+          <RemoveButton item={item}></RemoveButton>
+        </Buttons>
       )}
-    </li>
+    </Card>
   );
 };
 export default Product;
